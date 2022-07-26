@@ -1,0 +1,20 @@
+{{> header/header-block-loggedIn}}
+
+<div class="container mt-5 rounded log-sign" style="width: 35%;">
+        <div class = "row">     
+            <div class = "col" id="form">
+                <form class="mt-5 mb-3" id="login-form">
+                    <h2 id="log-sign">Log in</h2>
+
+                    <label for="emaillogin" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder = "your username is your email">
+
+                    <label for="passwordlogin" class="form-label">Password</label>
+                    <input type="text" class="form-control mb-2" id="password" placeholder ="password">
+
+                    <button type="submit" class="btn btn-success btn-lg mt-3" style="width: 20%;"  id="login-form-button">Log in</button>
+                </form>
+            </div>
+    </div>
+</div>
+<script src='./js/login.js'></script>

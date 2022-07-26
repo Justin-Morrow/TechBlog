@@ -1,0 +1,21 @@
+{{> header/header-block-loggedIn}}
+<div class="card mt-5" id="post-id" data-post={{post.id}} style="width: 70%; margin-left: 15%;">
+    <h2>Let's update the post!</h2>
+    {{!-- <a href='/post/{{userId}}'></a> --}}
+    <form id="update-post-form">
+    <div class="form-group">
+        <input id='post-name' type="input" class="form-control text-center" placeholder={{post.name}} aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <textarea class="form-control is-invalid text-center" id="validationTextarea" placeholder={{post.description}}  required></textarea>
+        <div class="invalid-feedback">
+        Please enter your post in the textarea.
+        </div>
+    </div>
+    <!-- <h5 id="createdby" class="text-right">Created by: {{userPost.post_username}}</h5> -->
+    <!-- <h6 class="text-right">{{userPost.date_created}}</h6>  -->
+    <button type="submit" id="update-post-btn" class="btn btn-success btn-lg font-weight-bolder"> Update post</button>
+    <button type="submit" id="delete-post-btn" class="btn btn-success btn-lg font-weight-bolder"> Delete post</button>
+    </form>
+</div>
+<script src='../../js/deleteOrUpdate.js'></script>

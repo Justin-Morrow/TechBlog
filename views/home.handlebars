@@ -1,0 +1,25 @@
+{{>header/header-block-logout}}
+
+{{!-- includes existing blog posts if any have been posted; navigation links for 
+the homepage and the dashboard; and the option to log in --}}
+<div>
+        <header>
+
+        </header>
+    
+    {{#each posts as |userPost|}}
+        <div class="card border-successmt-3 mt-5 mb-3" id="card-posts" style="width: 70%;">
+            <div class="card-header bg-transparent border-success">
+                <a class="text-center" href='/single/post/{{userPost.id}}'><h3 class="card-title">{{userPost.name}}</h3></a>
+            </div>
+            <div class="card-body text-success text-justify">
+                
+                <p class="card-text">{{userPost.description}}</p>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+            <h6 class="text-right">Created by: {{User.username}} {{userPost.createdAt}} </h6>
+        </div>
+        </div>
+    {{/each}}
+    <a style="width: 30%;" id="create-style" class="btn btn-success font-weight-bolder mt-5 mb-2" href="/dashboard/create-post">Create a new post post</a>   
+</div>
