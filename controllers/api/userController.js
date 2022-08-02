@@ -19,6 +19,8 @@ router.get("/",(req,res)=>{
 })
 
 router.post("/",(req,res)=>{
+    console.log("username =", req.body.username);
+    console.log("password =", req.body.password);
     User.create({
         username:req.body.username,
         password:req.body.password,
